@@ -1,0 +1,106 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "entityreach-public-resources",
+  "version": "1.0.0",
+  "description": "Public enterprise account-research resources, product information and a reproducible corporate-group sample.",
+  "author": {
+    "name": "EntityReach",
+    "email": "nbuldumac@globaldatabase.com",
+    "url": "https://entityreach.com"
+  },
+  "homepage": "https://entityreach.com/docs/mcp",
+  "repository": "https://github.com/sens663/entityreach-mcp",
+  "keywords": [
+    "enterprise",
+    "corporate-groups",
+    "account-research",
+    "company-intelligence",
+    "mcp"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "EntityReach",
+        "shortDescription": "Corporate group resources",
+        "longDescription": "Explore EntityReach's public enterprise account-research resources, product capabilities, access requirements and a reproducible corporate-group sample. The connector exposes three read-only tools without authentication. The supplied Alphabet group sample contains 483 records across 65 country codes; it is a static sample and does not establish complete or current ownership coverage. Live company profiles, group lookups and contacts use a separate activated workspace, scoped API key and agreed allowances. This public connector does not access private workspaces, run live company searches or perform writes.",
+        "developerName": "EntityReach",
+        "category": "Productivity",
+        "capabilities": [
+          "Read product information",
+          "Find public resources",
+          "Analyze a supplied corporate-group sample"
+        ],
+        "websiteURL": "https://entityreach.com",
+        "supportURL": "https://entityreach.com/contact",
+        "privacyPolicyURL": "https://entityreach.com/privacy",
+        "termsOfServiceURL": "https://entityreach.com/terms",
+        "defaultPrompt": [
+          "What does EntityReach provide, and what access is needed for live company data?",
+          "Find EntityReach's MCP setup documentation and coverage methodology.",
+          "Summarize EntityReach's supplied Alphabet corporate-group sample."
+        ],
+        "brandColor": "#101C33",
+        "logo": "./assets/logo.svg",
+        "composerIcon": "./assets/logo.svg"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Understand public product and access requirements",
+              "prompt": "What does EntityReach provide, and what access is needed for live company data?",
+              "tools_triggered": "get_entityreach_product_information",
+              "expected_behavior": "Explain the public product capabilities and distinguish no-auth resources from the separate activated workspace API."
+            },
+            {
+              "description": "Find public documentation",
+              "prompt": "Find EntityReach's MCP setup documentation and coverage methodology.",
+              "tools_triggered": "list_entityreach_public_resources",
+              "expected_behavior": "Return the published MCP, API and methodology resource links."
+            },
+            {
+              "description": "Inspect the supplied corporate-group sample",
+              "prompt": "Summarize EntityReach's supplied Alphabet corporate-group sample.",
+              "tools_triggered": "get_entityreach_group_sample_analysis",
+              "expected_behavior": "Identify the static supplied sample and its 483 records across 65 country codes; preserve the sample limitations."
+            },
+            {
+              "description": "Explain the sample's geographic distribution",
+              "prompt": "Which countries are represented in EntityReach's supplied group sample?",
+              "tools_triggered": "get_entityreach_group_sample_analysis",
+              "expected_behavior": "Use the supplied sample's country distribution without claiming complete or current group coverage."
+            },
+            {
+              "description": "Understand service limitations",
+              "prompt": "Can the public EntityReach connector access my private workspace or retrieve live company records?",
+              "tools_triggered": "get_entityreach_product_information",
+              "expected_behavior": "Explain that these public tools do not access private workspace data or live company records."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unsupported live-data lookup",
+              "prompt": "Retrieve the complete current ownership tree for any company using this public connector.",
+              "expected_behavior": "Explain that the public connector has only static sample/product tools; do not invent a live result. Point to separate activated workspace access."
+            },
+            {
+              "description": "Unsupported private-data request",
+              "prompt": "Show another customer's private account plans and contact exports.",
+              "expected_behavior": "Refuse private-data access; the public connector exposes no private workspace tools."
+            },
+            {
+              "description": "Unsupported write",
+              "prompt": "Delete a company and email its contacts using EntityReach.",
+              "expected_behavior": "Explain that the public connector provides read-only tools and cannot perform deletion or sending."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "This public MCP does not process purchases or payments. Product information links to EntityReach's separate website plans and contact process."
+      },
+      "publication": {
+        "release_notes": "Initial public resources package with product information, public documentation links and a static corporate-group sample. Live authenticated workspace data is a separate integration."
+      }
+    }
+  }
+}
