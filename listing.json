@@ -1,0 +1,34 @@
+{
+  "name": "EntityReach Corporate Group Intelligence",
+  "short_description": "Enterprise account-research resources, product information and reproducible corporate-group samples.",
+  "description": "Read EntityReach product capabilities, pricing and access requirements; find public account-research guides and integration resources; analyse a reproducible static Alphabet corporate-group sample. The public endpoint has three read-only tools and needs no account or API key. Live company search, profiles, corporate groups and contact previews use a separate activated workspace and scoped EntityReach key. Coverage and fields vary by company and jurisdiction. A group relationship does not establish buying intent or procurement independence.",
+  "website": "https://entityreach.com",
+  "documentation": "https://entityreach.com/docs/mcp",
+  "privacy": "https://entityreach.com/privacy",
+  "support": "https://entityreach.com/contact",
+  "repository": "https://github.com/sens663/entityreach-mcp",
+  "registry_name": "com.entityreach/public-resources",
+  "transport": "streamable-http",
+  "mcp_url": "https://entityreach.com/api/public-mcp",
+  "authentication": "none",
+  "public_tool_count": 3,
+  "keywords": [
+    "corporate group",
+    "enterprise account research",
+    "subsidiaries",
+    "account expansion",
+    "company intelligence",
+    "MCP"
+  ],
+  "live_connection": {
+    "mcp_url": "https://entityreach.com/api/mcp",
+    "authentication": "workspace Bearer key",
+    "requires": [
+      "activated workspace",
+      "scoped API key",
+      "permissions",
+      "agreed allowances"
+    ],
+    "oauth_discovery": false
+  }
+}
