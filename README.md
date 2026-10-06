@@ -57,3 +57,9 @@ This Bearer-key endpoint does not supply OAuth discovery. OAuth-only clients sho
 - [Contact EntityReach](https://entityreach.com/contact)
 
 Coverage varies by company and jurisdiction. A corporate relationship does not establish buying intent, budget, procurement independence or existing agreement coverage. Preserve the evidence classifications returned by the service.
+
+## Publication and portable package
+
+The public service is published in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=com.entityreach) as `com.entityreach/public-resources`, version `1.0.0`. It is also searchable in the [mcpub archive](https://mcpub.dev/) using EntityReach; its separate live scanner may take time to index it.
+
+[`plugin/`](plugin/) contains a portable Agent Plugins package, the existing EntityReach logo and prepared review scenarios. It is not yet a ChatGPT or Claude directory listing. Developer identity verification, platform testing, a walkthrough and directory review remain separate steps. The package contains no production backend or private credentials.
