@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "entityreach-public": {
+      "url": "https://entityreach.com/api/public-mcp"
+    }
+  }
+}
