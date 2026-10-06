@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "entityreach": {
+      "type": "streamable-http",
+      "url": "https://entityreach.com/api/public-mcp"
+    }
+  }
+}
