@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.entityreach/public-resources",
+  "title": "EntityReach Corporate Group Intelligence",
+  "description": "Enterprise account-research resources, product information and reproducible corporate-group samples.",
+  "version": "1.0.0",
+  "websiteUrl": "https://entityreach.com/docs/mcp",
+  "repository": {
+    "url": "https://github.com/sens663/entityreach-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://entityreach.com/api/public-mcp"
+    }
+  ],
+  "icons": [
+    {
+      "src": "https://entityreach.com/entityreach-apple-touch-icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "180x180"
+      ]
+    }
+  ]
+}
