@@ -1,0 +1,16 @@
+name: entityreach-public-resources
+type: remote
+meta:
+  category: documentation
+  tags:
+    - documentation
+    - corporate-groups
+    - enterprise
+    - remote
+about:
+  title: EntityReach Public Resources
+  description: Read enterprise account-research resources, product information and a reproducible corporate-group sample. Live company data requires separate activated workspace access.
+  icon: https://entityreach.com/entityreach-apple-touch-icon.png
+remote:
+  transport_type: streamable-http
+  url: https://entityreach.com/api/public-mcp
