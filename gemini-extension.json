@@ -1,0 +1,16 @@
+{
+  "name": "entityreach-mcp",
+  "version": "1.0.0",
+  "description": "EntityReach public account-research resources, product information and a reproducible corporate-group sample. No API key required.",
+  "mcpServers": {
+    "entityreach-public": {
+      "httpUrl": "https://entityreach.com/api/public-mcp",
+      "includeTools": [
+        "get_entityreach_product_information",
+        "list_entityreach_public_resources",
+        "get_entityreach_group_sample_analysis"
+      ]
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}
