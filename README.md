@@ -30,6 +30,17 @@ For another client, create a remote Streamable HTTP connection to the same endpo
 node entityreach-mcp-client.mjs --public get_entityreach_group_sample_analysis
 ```
 
+
+## Connect with Gemini CLI
+
+Install the public extension from this repository:
+
+```sh
+gemini extensions install https://github.com/sens663/entityreach-mcp
+```
+
+The root `gemini-extension.json` connects directly over Streamable HTTP and includes only the three public, read-only tools. No API key is required. It passed `gemini extensions validate` with Gemini CLI 0.63.0. The repository is tagged for the official Gemini CLI gallery's daily crawler; gallery indexing is a separate step and is not yet confirmed.
+
 ## Three useful public prompts
 
 1. "What does EntityReach provide for enterprise account expansion, and what access is required for live company data?"
